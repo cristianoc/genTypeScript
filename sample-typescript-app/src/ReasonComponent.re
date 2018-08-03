@@ -1,5 +1,6 @@
 let component = ReasonReact.statelessComponent("Component");
 
+[@genFlow]
 let make = (~message="default message", _children) : ReasonReact.component(_) => {
   ...component,
   render: _self =>
@@ -7,11 +8,3 @@ let make = (~message="default message", _children) : ReasonReact.component(_) =>
       ("ReasonReact " ++ message |. ReasonReact.string)
     </div>,
 };
-
-/* [@bs.deriving abstract]
-type jsProps = {message: string};
-
-let jsComponent =
-  ReasonReact.wrapReasonForJs(~component, jsProps =>
-    make(~message=jsProps |. messageGet, [||])
-  ); */
