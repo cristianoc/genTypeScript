@@ -14,7 +14,7 @@ export interface Props {
 
 export const ReasonComponent: React.ComponentClass<Props> = ReasonReact.wrapReasonForJs(
   ReasonComponentBS.component,
-  (jsProps: Props) => {
-    return ReasonComponentBS.make(jsProps.message, jsProps.children);
-  }
-);
+  // tslint:disable-next-line:only-arrow-functions
+  (function (jsProps: Props) {
+     return ReasonComponentBS.make(jsProps.message, jsProps.children);
+  }));
