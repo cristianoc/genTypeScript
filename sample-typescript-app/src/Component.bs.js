@@ -19,7 +19,9 @@ function make($staropt$star, _) {
           /* willUpdate */component[/* willUpdate */7],
           /* shouldUpdate */component[/* shouldUpdate */8],
           /* render */(function () {
-              return React.createElement("div", undefined, message);
+              return React.createElement("div", {
+                          className: "App"
+                        }, "ReasonReact " + message);
             }),
           /* initialState */component[/* initialState */10],
           /* retainedProps */component[/* retainedProps */11],
