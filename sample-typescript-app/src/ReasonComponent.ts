@@ -12,7 +12,9 @@ export interface Props {
   children?: any;
 }
 
-export const ReasonComponent: React.ComponentClass<Props> =
-  ReasonReact.wrapReasonForJs(ReasonComponentBs.component, (jsProps: Props) => {
-    return ReasonComponentBs.make(jsProps.message, jsProps.children);
-});
+export const ReasonComponent: React.ComponentClass<Props> = ReasonReact.wrapReasonForJs(
+  ReasonComponentBS.component,
+  (jsProps: Props) => {
+    return ReasonComponentBS.make(jsProps.message, jsProps.children);
+  }
+);
