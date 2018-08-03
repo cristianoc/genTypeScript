@@ -1,6 +1,6 @@
 // This should be generated
 
-var ComponentBs = require("./Component.bs");
+import * as ComponentBs from "./Component.bs";
 
 export interface Props {
   message?: string;
