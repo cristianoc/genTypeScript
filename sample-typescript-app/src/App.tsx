@@ -3,6 +3,7 @@ import "./App.css";
 
 import logo from "./logo.svg";
 
+// tslint:disable-next-line:interface-name
 export interface Props {
   name: string;
   count?: number;

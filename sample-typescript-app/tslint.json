@@ -5,8 +5,5 @@
       "config/**/*.js",
       "node_modules/**/*.ts"
     ]
-  },
-  "rules": {
-    "interface-name" : [true, "never-prefix"]
   }
 }
