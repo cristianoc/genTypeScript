@@ -29,6 +29,11 @@ function make($staropt$star, _) {
         ];
 }
 
+var jsComponent = ReasonReact.wrapReasonForJs(component, (function (jsProps) {
+        return make(jsProps.message, /* array */[]);
+      }));
+
 exports.component = component;
 exports.make = make;
+exports.jsComponent = jsComponent;
 /* component Not a pure module */
