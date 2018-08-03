@@ -10,7 +10,8 @@
   },
   "scripts": {
     "start": "bsb -make-world -w & react-scripts-ts start",
-    "build": "bsb -make-world && react-scripts-ts build",
+    "build": "bsb -make-world",
+    "clean": "bsb -clean-world",
     "test": "react-scripts-ts test --env=jsdom",
     "eject": "react-scripts-ts eject"
   },
