@@ -1,7 +1,7 @@
 // This file should be generated
 
 // tslint:disable-next-line:no-var-requires
-const ComponentBs = require("./Component.bs");
+const ReasonComponentBs = require("./ReasonComponent.bs");
 
 // tslint:disable-next-line:no-var-requires
 const ReasonReact = require("reason-react/src/ReasonReact.js");
@@ -12,7 +12,7 @@ export interface Props {
   children?: any;
 }
 
-export const Component: React.ComponentClass<Props> =
-  ReasonReact.wrapReasonForJs(ComponentBs.component, (jsProps: Props) => {
-    return ComponentBs.make(jsProps.message, jsProps.children);
+export const ReasonComponent: React.ComponentClass<Props> =
+  ReasonReact.wrapReasonForJs(ReasonComponentBs.component, (jsProps: Props) => {
+    return ReasonComponentBs.make(jsProps.message, jsProps.children);
 });
