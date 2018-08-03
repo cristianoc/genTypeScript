@@ -1,7 +1,7 @@
 // This file should be generated
 
 // tslint:disable-next-line:no-var-requires
-const ReasonComponentBs = require("./ReasonComponent.bs");
+const ReasonComponentBS = require("./ReasonComponent.bs");
 
 // tslint:disable-next-line:no-var-requires
 const ReasonReact = require("reason-react/src/ReasonReact.js");

@@ -1,6 +1,6 @@
 /* @flow strict */
 
-const ReasonComponent = require("./ReasonComponent.bs");
+const ReasonComponentBS = require("./ReasonComponent.bs");
 const ReasonReact = require("reason-react/src/ReasonReact.js");
 
 import type {Component as ReactComponent} from 'React';
@@ -10,9 +10,9 @@ import type {noRetainedProps as ReasonReactnoRetainedProps} from './ReasonReact.
 import type {stateless as ReasonReactstateless} from './ReasonReact.re';
 export type Props = {|message?:string, children?:any|};
 const component = ReasonReact.wrapReasonForJs(
-  ReasonComponent.component,
+  ReasonComponentBS.component,
   (function (jsProps: Props) {
-     return ReasonComponent.make(jsProps.message, jsProps.children);
+     return ReasonComponentBS.make(jsProps.message, jsProps.children);
   }));
 
 exports.component = (component: React$ComponentType<Props>);
