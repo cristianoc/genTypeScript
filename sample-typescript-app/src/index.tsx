@@ -1,11 +1,9 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import App from "./App";
-import * as ComponentRe from "./Component.bs";
+import {Component} from "./Component";
 import "./index.css";
 import registerServiceWorker from "./registerServiceWorker";
-
-const Component = ComponentRe.jsComponent;
 
 ReactDOM.render(
   <div>
