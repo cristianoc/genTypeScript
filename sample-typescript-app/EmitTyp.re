@@ -36,3 +36,7 @@ let reactComponentType = (~config) =>
 let fileHeader = (~config) =>
   config.language != "typescript" ?
     "/* @flow strict */\n" : "/* Typescript file generated */";
+
+let componentExportName = (~config, ~moduleName) =>
+  config.language != "typescript" ?
+    "component" : ModuleName.toString(moduleName);
