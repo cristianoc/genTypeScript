@@ -7,7 +7,6 @@ const ReasonReact = require("reason-react/src/ReasonReact.js");
 
 // tslint:disable-next-line:interface-name
 export interface Props {message?:string; children?:any};
-
 export const ReasonComponent: React.ComponentClass<Props> = ReasonReact.wrapReasonForJs(
   ReasonComponentBS.component,
   (function _(jsProps: Props) {

@@ -14,3 +14,5 @@ let emitExportType = (~opaque, ~typeName, ~typeParams, typ) =>
   ++ typ;
 
 let requireReact = false;
+
+let reactComponentType = "React.ComponentClass";
