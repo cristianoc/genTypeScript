@@ -6,10 +6,6 @@ const ReasonComponentBS = require("./ReasonComponent.bs");
 const ReasonReact = require("reason-react/src/ReasonReact.js");
 
 import type {Component as ReactComponent} from 'React';
-import type {actionless as ReasonReactactionless} from './ReasonReact.re';
-import type {component as ReasonReactcomponent} from './ReasonReact.re';
-import type {noRetainedProps as ReasonReactnoRetainedProps} from './ReasonReact.re';
-import type {stateless as ReasonReactstateless} from './ReasonReact.re';
 // tslint:disable-next-line:interface-name
 export interface Props {message?:string; children?:any};
 export const component: React.ComponentClass<Props> = ReasonReact.wrapReasonForJs(
