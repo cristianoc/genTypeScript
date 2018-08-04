@@ -1,6 +1,8 @@
 /* @flow strict */
 
+// tslint:disable-next-line:no-var-requires
 const ReasonComponentBS = require("./ReasonComponent.bs");
+// tslint:disable-next-line:no-var-requires
 const ReasonReact = require("reason-react/src/ReasonReact.js");
 
 import type {Component as ReactComponent} from 'React';
