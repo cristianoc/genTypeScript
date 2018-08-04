@@ -13,3 +13,4 @@ export const ReasonComponent: React.ComponentClass<Props> = ReasonReact.wrapReas
   (function _(jsProps: Props) {
      return ReasonComponentBS.make(jsProps.message, jsProps.children);
   }));
+
