@@ -32,3 +32,7 @@ let requireReact = (~config) => config.language != "typescript";
 let reactComponentType = (~config) =>
   config.language != "typescript" ?
     "React$ComponentType" : "React.ComponentClass";
+
+let fileHeader = (~config) =>
+  config.language != "typescript" ?
+    "/* @flow strict */\n" : "/* Typescript file generated */";

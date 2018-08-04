@@ -1,5 +1,4 @@
-/* @flow strict */
-
+/* Typescript file generated */
 // tslint:disable-next-line:no-var-requires
 const ReasonComponentBS = require("./ReasonComponent.bs");
 // tslint:disable-next-line:no-var-requires
