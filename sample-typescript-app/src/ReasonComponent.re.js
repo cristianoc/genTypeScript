@@ -11,7 +11,7 @@ import type {component as ReasonReactcomponent} from './ReasonReact.re';
 import type {noRetainedProps as ReasonReactnoRetainedProps} from './ReasonReact.re';
 import type {stateless as ReasonReactstateless} from './ReasonReact.re';
 // tslint:disable-next-line:interface-name
-export interface Props {|message?:string, children?:any|};
+export interface Props {message?:string; children?:any};
 const component = ReasonReact.wrapReasonForJs(
   ReasonComponentBS.component,
   (function _(jsProps: Props) {
