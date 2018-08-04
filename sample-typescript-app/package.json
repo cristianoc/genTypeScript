@@ -11,7 +11,7 @@
   "scripts": {
     "start": "bsb -make-world -w & react-scripts-ts start",
     "build": "bsb -make-world",
-    "clean": "bsb -clean-world",
+    "clean": "bsb -clean-world && rm src/ReasonComponent.ts",
     "test": "react-scripts-ts test --env=jsdom",
     "eject": "react-scripts-ts eject"
   },

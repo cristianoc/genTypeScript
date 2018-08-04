@@ -40,3 +40,6 @@ let fileHeader = (~config) =>
 let componentExportName = (~config, ~moduleName) =>
   config.language != "typescript" ?
     "component" : ModuleName.toString(moduleName);
+
+let outputFileSuffix = (~config) =>
+  config.language != "typescript" ? ".re.js" : ".ts";
