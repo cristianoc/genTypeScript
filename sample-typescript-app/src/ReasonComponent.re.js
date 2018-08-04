@@ -11,7 +11,7 @@ import type {stateless as ReasonReactstateless} from './ReasonReact.re';
 export type Props = {|message?:string, children?:any|};
 const component = ReasonReact.wrapReasonForJs(
   ReasonComponentBS.component,
-  (function (jsProps: Props) {
+  (function _(jsProps: Props) {
      return ReasonComponentBS.make(jsProps.message, jsProps.children);
   }));
 
