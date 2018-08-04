@@ -12,3 +12,5 @@ let emitExportType = (~opaque, ~typeName, ~typeParams, typ) =>
   ++ typeParams
   ++ " "
   ++ typ;
+
+let requireReact = false;
