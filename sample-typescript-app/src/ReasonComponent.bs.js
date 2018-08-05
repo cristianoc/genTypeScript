@@ -31,6 +31,12 @@ function make($staropt$star, _) {
         ];
 }
 
+function minus($staropt$star, second) {
+  var first = $staropt$star !== undefined ? $staropt$star : 0;
+  return first - second | 0;
+}
+
 exports.component = component;
 exports.make = make;
+exports.minus = minus;
 /* component Not a pure module */

@@ -8,3 +8,6 @@ let make = (~message="default message", _children) : ReasonReact.component(_) =>
       ("ReasonReact " ++ message |. ReasonReact.string)
     </div>,
 };
+
+[@genFlow]
+let minus = (~first=0, ~second) => first - second;

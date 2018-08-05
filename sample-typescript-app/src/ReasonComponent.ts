@@ -11,4 +11,5 @@ export const ReasonComponent: React.ComponentClass<Props> = ReasonReact.wrapReas
   (function _(jsProps: Props) {
      return ReasonComponentBS.make(jsProps.message, jsProps.children);
   }));
+export const minus: (_:{first?:number; second:number}) => number = function _(Arg1) { const result = ReasonComponentBS.minus(Arg1.first, Arg1.second); return result };
 
