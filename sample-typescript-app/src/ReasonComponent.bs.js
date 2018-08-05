@@ -36,7 +36,12 @@ function minus($staropt$star, second) {
   return first - second | 0;
 }
 
+function useTypeDefinedInAnotherModule(x) {
+  return x;
+}
+
 exports.component = component;
 exports.make = make;
 exports.minus = minus;
+exports.useTypeDefinedInAnotherModule = useTypeDefinedInAnotherModule;
 /* component Not a pure module */

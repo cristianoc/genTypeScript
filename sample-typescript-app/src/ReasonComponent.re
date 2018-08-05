@@ -11,3 +11,6 @@ let make = (~message="default message", _children) : ReasonReact.component(_) =>
 
 [@genFlow]
 let minus = (~first=0, ~second) => first - second;
+
+[@genFlow]
+let useTypeDefinedInAnotherModule = (x:Types.t) => x;

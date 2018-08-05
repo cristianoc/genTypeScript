@@ -43,3 +43,21 @@ let componentExportName = (~config, ~moduleName) =>
 
 let outputFileSuffix = (~config) =>
   config.language != "typescript" ? ".re.js" : ".ts";
+
+let generatedModuleExtension = (~config) =>
+  config.language != "typescript" ? ".re" : "";
+
+let importTypeAs = (~config, ~typeName, ~asTypeName, ~importPath) =>
+  "import "
+  ++ (config.language != "typescript" ? "type " : "")
+  ++ "{"
+  ++ typeName
+  ++ (
+    switch (asTypeName) {
+    | Some(asT) => " as " ++ asT
+    | None => ""
+    }
+  )
+  ++ "} from '"
+  ++ (importPath |> ImportPath.toString)
+  ++ "'";
