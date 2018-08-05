@@ -19,11 +19,11 @@ let emitExportType = (~config, ~opaque, ~typeName, ~typeParams, typ) =>
     ++ typ
     ++ (opaque ? " // Reason type already checked. Making it opaque" : "");
   } else {
-    "// tslint:disable-next-line:interface-name\n"
-    ++ "export interface "
+    "// tslint:disable-next-line:interface-over-type-literal\n"
+    ++ "export type "
     ++ typeName
     ++ typeParams
-    ++ " "
+    ++ " = "
     ++ typ;
   };
 
