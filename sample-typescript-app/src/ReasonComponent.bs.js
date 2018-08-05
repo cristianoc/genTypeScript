@@ -40,8 +40,19 @@ function useTypeDefinedInAnotherModule(x) {
   return x;
 }
 
+function tToString(t) {
+  if (typeof t === "number") {
+    return "A";
+  } else if (t.tag) {
+    return "C(" + (t[0] + ")");
+  } else {
+    return "B(" + (String(t[0]) + ")");
+  }
+}
+
 exports.component = component;
 exports.make = make;
 exports.minus = minus;
 exports.useTypeDefinedInAnotherModule = useTypeDefinedInAnotherModule;
+exports.tToString = tToString;
 /* component Not a pure module */

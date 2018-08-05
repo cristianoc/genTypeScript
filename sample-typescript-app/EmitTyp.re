@@ -51,6 +51,11 @@ let emitExportType = (~config, ~opaque, ~typeName, ~typeParams, typ) =>
     ++ " = "
     ++ typ
     ++ (opaque ? " // Reason type already checked. Making it opaque" : "");
+  } else if (opaque) {
+    "// tslint:disable-next-line:max-classes-per-file \n"
+    ++ "export abstract class "
+    ++ typeName
+    ++ " { protected opaque:any }";
   } else {
     "// tslint:disable-next-line:interface-over-type-literal\n"
     ++ "export type "
@@ -94,3 +99,6 @@ let importTypeAs = (~config, ~typeName, ~asTypeName, ~importPath) =>
   ++ "} from '"
   ++ (importPath |> ImportPath.toString)
   ++ "'";
+
+let blockTagValue = (~config, i) =>
+  string_of_int(i) ++ (config.language != "typescript" ? "" : " as any");
