@@ -1,6 +1,7 @@
 # genTypescript
 
-Explore typescript support for [genFlow](https://github.com/cristianoc/genFlow).
+This is a companion repository to [genFlow](https://github.com/cristianoc/genFlow), to explore
+type-safe bindings between [Reason](https://reasonml.github.io/) and [Typescript](https://www.typescriptlang.org/).
 
 There's a sample project [sample-typescript-app](sample-typescript-app) created with:
 ```
