@@ -7,13 +7,16 @@ const ReasonComponentBS = require("./ReasonComponent.bs");
 const ReasonReact = require("reason-react/src/ReasonReact.js");
 
 // No need to import locally visible type t. Make sure it is also marked with @genFlow;
+
+import {list} from '../src/shims/ReasonPervasives.shim';
+
 import {t as Typest} from '../src/nested/Types';
 // tslint:disable-next-line:interface-over-type-literal
-export type Props = {message?:string; children?:any};
+export type Props = {message?:string; intList?:list<number>; children?:any};
 export const ReasonComponent: React.ComponentClass<Props> = ReasonReact.wrapReasonForJs(
   ReasonComponentBS.component,
   (function _(jsProps: Props) {
-     return ReasonComponentBS.make(jsProps.message, jsProps.children);
+     return ReasonComponentBS.make(jsProps.message, jsProps.intList, jsProps.children);
   }));
 export const minus: (_1:{first?:number; second:number}) => number = function _(Arg1) { const result = ReasonComponentBS.minus(Arg1.first, Arg1.second); return result };
 export const useTypeDefinedInAnotherModule: (_1:Typest) => Typest = ReasonComponentBS.useTypeDefinedInAnotherModule;

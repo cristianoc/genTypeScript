@@ -45,7 +45,8 @@ and renderFunType = (~config, ~exact, typeParams, valParams, retType) =>
   ++ (retType |> toString(~config, ~exact));
 
 let any = Ident("any", []);
-let toString = (~config) => toString(~config, ~exact=config.language != "typescript");
+let toString = (~config) =>
+  toString(~config, ~exact=config.language != "typescript");
 let commentBeforeRequire = (~config) =>
   config.language != "typescript" ?
     "" : "// tslint:disable-next-line:no-var-requires\n";
@@ -95,7 +96,7 @@ let generatedModuleExtension = (~config) =>
   config.language != "typescript" ? ".re" : "";
 
 let importTypeAs = (~config, ~typeName, ~asTypeName, ~importPath) =>
-  "import "
+  "\nimport "
   ++ (config.language != "typescript" ? "type " : "")
   ++ "{"
   ++ typeName
@@ -111,3 +112,6 @@ let importTypeAs = (~config, ~typeName, ~asTypeName, ~importPath) =>
 
 let blockTagValue = (~config, i) =>
   string_of_int(i) ++ (config.language != "typescript" ? "" : " as any");
+
+let shimExtension = (~config) =>
+  config.language != "typescript" ? ".shim.js" : ".shim.ts";
