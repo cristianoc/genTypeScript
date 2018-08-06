@@ -1,3 +1,6 @@
 {
-  "language" : "typescript"
+  "language" : "typescript",
+    "shims": [
+    "ReasonPervasives=ReasonPervasives"
+  ]
 }
