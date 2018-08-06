@@ -4,39 +4,48 @@ let genericsString = genericStrings =>
   genericStrings === [] ?
     "" : "<" ++ String.concat(",", genericStrings) ++ ">";
 
-let rec toString = (~exact, typ) =>
+let rec toString = (~config, ~exact, typ) =>
   switch (typ) {
-  | Optional(typ) => "?" ++ (typ |> toString(~exact))
+  | Optional(typ) => "?" ++ (typ |> toString(~config, ~exact))
   | Ident(identPath, typeArguments) =>
-    identPath ++ genericsString(List.map(toString(~exact), typeArguments))
-  | ObjectType(fields) => fields |> renderObjType(~exact)
+    identPath
+    ++ genericsString(List.map(toString(~config, ~exact), typeArguments))
+  | ObjectType(fields) => fields |> renderObjType(~config, ~exact)
   | Arrow(typeParams, valParams, retType) =>
-    renderFunType(~exact, typeParams, valParams, retType)
+    renderFunType(~config, ~exact, typeParams, valParams, retType)
   }
-and renderField = (~exact, (lbl, optness, typ)) => {
+and renderField = (~config, ~exact, (lbl, optness, typ)) => {
   let optMarker = optness === NonMandatory ? "?" : "";
-  lbl ++ optMarker ++ ":" ++ (typ |> toString(~exact));
+  lbl ++ optMarker ++ ":" ++ (typ |> toString(~config, ~exact));
 }
-and renderObjType = (~exact, fields) =>
+and renderObjType = (~config, ~exact, fields) =>
   (exact ? "{|" : "{")
   ++ String.concat(
        exact ? ", " : "; ",
-       List.map(renderField(~exact), fields),
+       List.map(renderField(~config, ~exact), fields),
      )
   ++ (exact ? "|}" : "}")
 /* TODO: Always drop the final unit argument. */
-and renderFunType = (~exact, typeParams, valParams, retType) =>
-  genericsString(List.map(toString(~exact), typeParams))
+and renderFunType = (~config, ~exact, typeParams, valParams, retType) =>
+  genericsString(List.map(toString(~config, ~exact), typeParams))
   ++ "("
   ++ String.concat(
        ", ",
-       List.map(t => "_:" ++ (t |> toString(~exact)), valParams),
+       List.mapi(
+         (i, t) => {
+           let parameterName =
+             config.language != "typescript" ?
+               "" : "_" ++ string_of_int(i + 1) ++ ":";
+           parameterName ++ (t |> toString(~config, ~exact));
+         },
+         valParams,
+       ),
      )
   ++ ") => "
-  ++ (retType |> toString(~exact));
+  ++ (retType |> toString(~config, ~exact));
 
 let any = Ident("any", []);
-let toString = (~config) => toString(~exact=config.language != "typescript");
+let toString = (~config) => toString(~config, ~exact=config.language != "typescript");
 let commentBeforeRequire = (~config) =>
   config.language != "typescript" ?
     "" : "// tslint:disable-next-line:no-var-requires\n";
