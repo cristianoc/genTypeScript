@@ -64,7 +64,7 @@ let emitExportType = (~config, ~opaque, ~typeName, ~typeParams, typ) =>
     "// tslint:disable-next-line:max-classes-per-file \n"
     ++ "export abstract class "
     ++ typeName
-    ++ " { protected opaque:any }";
+    ++ " { protected opaque:any } /* simulate opaque types */";
   } else {
     "// tslint:disable-next-line:interface-over-type-literal\n"
     ++ "export type "
