@@ -8,5 +8,5 @@ import {list} from '../../src/shims/ReasonPervasives.shim';
 // tslint:disable-next-line:interface-over-type-literal
 export type t = number;
 export const someIntList: list<number> = TypesBS.someIntList;
-export const map: <T1109,T1107>(_1:(_1:T1109) => T1107, _2:list<T1109>) => list<T1107> = TypesBS.map;
+export const map: <T1,T2>(_1:(_1:T1) => T2, _2:list<T1>) => list<T2> = TypesBS.map;
 
