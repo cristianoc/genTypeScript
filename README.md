@@ -13,6 +13,6 @@ The project was extended by adding a ReasonReact component [ReasonComponent.re](
 
 ## Building
 
-Currently, building requires patching up genFlow with [EmitTyp.re](sample-typescript-app/EmitTyp.re) and follow the normal genFlow build and setup instructions.
+Follow the instructions to build and setup [genFlow](https://github.com/cristianoc/genFlow).
 
 The linter needs to be taught to ignore `.bs.js` files, see [tslint.json](sample-typescript-app/tslint.json).
