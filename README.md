@@ -53,4 +53,3 @@ Configuration files [bsconfig.json](sample-typescript-app/bsconfig.json), and [g
 The [shims](sample-typescript-app/src/shims) directory was added.
 
 The linter was taught to ignore `.bs.js` files, see [tslint.json](sample-typescript-app/tslint.json).
-e
