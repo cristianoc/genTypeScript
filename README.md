@@ -47,7 +47,7 @@ create-react-app sample-typescript-app --scripts-version=react-scripts-ts
 ```
 
 
-The project was extended by adding a ReasonReact component [ReasonComponent.re](sample-typescript-app/src/ReasonComponent.re). The typed wrapper [ReasonComponent.ts](sample-typescript-app/src/ReasonComponent.ts) is generated automatically by genFlow. The wrapper is used by [index.tsx](sample-typescript-app/src/index.tsx).
+The project was extended by adding a ReasonReact component [ReasonComponent.re](sample-typescript-app/src/ReasonComponent.re). The typed wrapper [ReasonComponent.tsx](sample-typescript-app/src/ReasonComponent.tsx) is generated automatically by genFlow. The wrapper is used by [index.tsx](sample-typescript-app/src/index.tsx).
 
 Configuration files [bsconfig.json](sample-typescript-app/bsconfig.json), and [genflowconfig.json](sample-typescript-app/genflowconfig.json) were added.
 The [shims](sample-typescript-app/src/shims) directory was added.
