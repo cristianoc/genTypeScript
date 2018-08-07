@@ -21,6 +21,7 @@ Follow the instructions to build [genFlow](https://github.com/cristianoc/genFlow
 ```
 # in sample-typescript-app
 export BS_CMT_POST_PROCESS_CMD="__path/__to/GenFlow.exe --setProjectRoot $PWD"
+yarn install
 yarn build
 yarn start
 ```
@@ -52,3 +53,4 @@ Configuration files [bsconfig.json](sample-typescript-app/bsconfig.json), and [g
 The [shims](sample-typescript-app/src/shims) directory was added.
 
 The linter was taught to ignore `.bs.js` files, see [tslint.json](sample-typescript-app/tslint.json).
+e
