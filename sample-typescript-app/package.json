@@ -6,7 +6,7 @@
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-scripts-ts": "2.16.0",
-    "reason-react": "^0.4.2"
+    "reason-react": "^0.5.3"
   },
   "scripts": {
     "start": "bsb -make-world -w & react-scripts-ts start",
