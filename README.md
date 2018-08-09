@@ -11,7 +11,7 @@ typed bindings between [Reason](https://reasonml.github.io/) and [TypeScript](ht
 
 ## Building genFlow
 
-Follow the instructions to build [genFlow](https://github.com/cristianoc/genFlow) and keep note of the `__path/__to/GenFlow.exe`.
+Follow the instructions to build [genFlow](https://github.com/cristianoc/genFlow) 0.2.0 and keep note of the `__path/__to/genflow.native`.
 
 
 ## Sample project [sample-typescript-app](sample-typescript-app)
@@ -20,7 +20,7 @@ Follow the instructions to build [genFlow](https://github.com/cristianoc/genFlow
 
 ```
 # in sample-typescript-app
-export BS_CMT_POST_PROCESS_CMD="__path/__to/GenFlow.exe --setProjectRoot $PWD"
+export BS_CMT_POST_PROCESS_CMD="__path/__to/genflow.native --setProjectRoot $PWD"
 yarn install
 yarn build
 yarn start
@@ -35,7 +35,7 @@ and start vscode **after** setting environment variable `BS_CMT_POST_PROCESS_CMD
 
 ```
 # in sample-typescript-app
-export BS_CMT_POST_PROCESS_CMD="__path/__to/GenFlow.exe --setProjectRoot $PWD"
+export BS_CMT_POST_PROCESS_CMD="__path/__to/genflow.native --setProjectRoot $PWD"
 code .
 ```
 
