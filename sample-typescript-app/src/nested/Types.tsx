@@ -7,6 +7,7 @@ const TypesBS = require("./Types.bs");
 
 
 import {list} from '../../src/shims/ReasonPervasives.shim';
+
 // tslint:disable-next-line:interface-over-type-literal
 export type t = number;
 export const someIntList: list<number> = TypesBS.someIntList;
@@ -20,4 +21,3 @@ export const B: <z>(_1:z) => TypeWithVarsB<z> = function _(Arg1) { return Create
 export type typeWithVars<x,y,z> =
   | TypeWithVarsA<x,y>
   | TypeWithVarsB<z>;
-

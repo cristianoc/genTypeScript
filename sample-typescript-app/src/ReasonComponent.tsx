@@ -12,6 +12,7 @@ const ReasonReact = require("reason-react/src/ReasonReact.js");
 import {list} from '../src/shims/ReasonPervasives.shim';
 
 import {t as Typest} from '../src/nested/Types';
+
 // tslint:disable-next-line:interface-over-type-literal
 export type Props = {message?:string; intList?:list<number>; children?:any};
 export const ReasonComponent: React.ComponentClass<Props> = ReasonReact.wrapReasonForJs(
@@ -35,4 +36,3 @@ export type t =
   | TB
   | TC;
 export const tToString: (_1:t) => string = ReasonComponentBS.tToString;
-
