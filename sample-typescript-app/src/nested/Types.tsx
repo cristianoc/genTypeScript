@@ -5,6 +5,11 @@ const CreateBucklescriptBlock = require("bs-platform/lib/js/block.js");
 // tslint:disable-next-line:no-var-requires
 const TypesBS = require("./Types.bs");
 
+// Warning polymorphic type unhandled:T1
+// Warning polymorphic type unhandled:T2
+// Warning polymorphic type unhandled:x
+// Warning polymorphic type unhandled:y
+// Warning polymorphic type unhandled:z
 
 import {list} from '../../src/shims/ReasonPervasives.shim';
 // tslint:disable-next-line:interface-over-type-literal

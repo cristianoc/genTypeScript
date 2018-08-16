@@ -8,6 +8,7 @@ const ReasonComponentBS = require("./ReasonComponent.bs");
 const ReasonReact = require("reason-react/src/ReasonReact.js");
 
 // No need to import locally visible type t. Make sure it is also marked with @genFlow
+// Warning polymorphic type unhandled:T1
 
 import {list} from '../src/shims/ReasonPervasives.shim';
 

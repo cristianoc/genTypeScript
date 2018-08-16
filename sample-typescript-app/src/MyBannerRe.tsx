@@ -8,6 +8,7 @@ const MyBannerReBS = require("./MyBannerRe.bs");
 // tslint:disable-next-line:no-var-requires
 const ReasonReact = require("reason-react/src/ReasonReact.js");
 
+// Warning polymorphic type unhandled:T1
 // tslint:disable-next-line:interface-over-type-literal
 export type Props = {show:boolean; message:string; children?:any};
 export const MyBannerRe: React.ComponentClass<Props> = ReasonReact.wrapReasonForJs(
