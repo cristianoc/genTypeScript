@@ -5,6 +5,7 @@ import "./index.css";
 import * as Types from "./nested/Types";
 import { A, B, minus, ReasonComponent, tToString } from "./ReasonComponent";
 import { t, TA, TB } from "./ReasonComponent";
+import * as Records from "./Records";
 import registerServiceWorker from "./registerServiceWorker";
 
 const minusOne: number = minus({ second: 1 });
@@ -17,13 +18,30 @@ const thisIsOK: t = A;
 // tslint:disable-next-line:no-console
 console.log(a, b, thisIsOK);
 
-const intList = Types.map( (x) => x+1, Types.someIntList, );
+const intList = Types.map(x => x + 1, Types.someIntList);
+
+const businesses = [
+  {
+    address: "Poison road",
+    name: "AcmeLTD",
+    owner: { name: "John", age: 12, address: "garage" }
+  }
+];
+
+const addresses = Records.findAllAddresses(businesses);
 
 ReactDOM.render(
   <div>
     <App name={"Hello"} />
     <ReasonComponent
-      message={"Message from typescript: minus one is " + minusOne + " and B(3) prints as " + tToString(b)}
+      message={
+        "Message from typescript: minus one is " +
+        minusOne +
+        " and B(3) prints as " +
+        tToString(b) +
+        " addresses: " +
+        addresses
+      }
       intList={intList}
     />
   </div>,
