@@ -11,7 +11,7 @@ typed bindings between [Reason](https://reasonml.github.io/) and [TypeScript](ht
 
 ## Building genFlow
 
-Follow the instructions to build [genFlow](https://github.com/cristianoc/genFlow) 0.5.0 and keep note of the `__path/__to/genflow.native`.
+Follow the instructions to build [genFlow](https://github.com/cristianoc/genFlow) 0.7.0 or later, and keep note of the `__path/__to/genflow.native`.
 
 
 ## Sample project [sample-typescript-app](sample-typescript-app)
