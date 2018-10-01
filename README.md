@@ -3,6 +3,8 @@
 This is a companion repository to [genFlow](https://github.com/cristianoc/genFlow), to explore
 typed bindings between [Reason](https://reasonml.github.io/) and [TypeScript](https://www.typescriptlang.org/).
 
+> **Disclosure:** This project is in the process of getting merged with `genFlow`, with the more general name `genType`. Some of the instructions below are out of date.
+
 [Here is a video illustrating the conversion of a ReasonReact component.](https://youtu.be/tlLoikU-etw)
 [![IMAGE ALT TEXT HERE](assets/ConvertReactComponent.png)](https://youtu.be/tlLoikU-etw)
 
